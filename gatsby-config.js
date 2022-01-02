@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Gatsby Starter",
+    siteUrl: 'https://www.yourdomain.tld',
+    title: 'Gatsby Starter',
   },
   plugins: [],
 };

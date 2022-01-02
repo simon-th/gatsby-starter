@@ -1,13 +1,15 @@
 module.exports = {
-  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
+  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'airbnb',
+    'airbnb-typescript',
   ],
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
   env: {
@@ -15,23 +17,24 @@ module.exports = {
     node: true,
     es2021: true,
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ['@typescript-eslint'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12, // Allows for the parsing of modern ECMAScript features
-    sourceType: "module", // Allows for the use of imports
+    sourceType: 'module', // Allows for the use of imports
+    project: ['./tsconfig.json'],
   },
   rules: {
-    "@typescript-eslint/explicit-function-return-type": "off",
+    '@typescript-eslint/explicit-function-return-type': 'off',
   },
   overrides: [
     // Override some TypeScript rules just for .js files
     {
-      files: ["*.js"],
+      files: ['*.js'],
       rules: {
-        "@typescript-eslint/no-var-requires": "off", //
+        '@typescript-eslint/no-var-requires': 'off', //
       },
     },
   ],
