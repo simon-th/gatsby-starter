@@ -10,13 +10,14 @@
   "scripts": {
     "develop": "npx gatsby develop",
     "start": "npx gatsby develop",
-    "build": "npx gatsby build",
+    "build": "npm run type-check && npm run format && npm run lint && npx gatsby build",
     "serve": "npx gatsby serve",
     "clean": "npx gatsby clean",
     "type-check": "npx tsc --noEmit --skipLibCheck",
-    "format-check": "npx prettier --check .",
+    "format": "npx prettier --check .",
     "format-fix": "npx prettier --write .",
-    "lint": "npx eslint --fix ."
+    "lint": "npx eslint .",
+    "lint-fix": "npx eslint --fix ."
   },
   "dependencies": {
     "@types/react": "^17.0.38",

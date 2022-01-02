@@ -3,9 +3,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
     'airbnb',
     'airbnb-typescript',
+    'prettier',
   ],
   settings: {
     react: {
